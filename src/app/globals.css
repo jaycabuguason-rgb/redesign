@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-heading), "Space Grotesk", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: hsl(225 20% 97%);
+  --foreground: hsl(230 25% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(230 25% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(230 25% 10%);
+  --primary: hsl(245 58% 51%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(225 15% 93%);
+  --secondary-foreground: hsl(230 25% 15%);
+  --muted: hsl(225 15% 93%);
+  --muted-foreground: hsl(225 10% 48%);
+  --accent: hsl(43 96% 56%);
+  --accent-foreground: hsl(30 50% 15%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(225 15% 90%);
+  --input: hsl(225 15% 90%);
+  --ring: hsl(245 58% 51%);
+  --radius: 0.75rem;
+
+  --sidebar: hsl(245 40% 16%);
+  --sidebar-foreground: hsl(225 20% 90%);
+  --sidebar-primary: hsl(245 58% 65%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(245 30% 22%);
+  --sidebar-accent-foreground: hsl(225 20% 90%);
+  --sidebar-border: hsl(245 25% 25%);
+  --sidebar-ring: hsl(245 58% 51%);
+
+  --chart-1: hsl(245 58% 51%);
+  --chart-2: hsl(170 60% 45%);
+  --chart-3: hsl(43 96% 56%);
+  --chart-4: hsl(340 65% 55%);
+  --chart-5: hsl(200 70% 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body), "Inter", sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading), "Space Grotesk", sans-serif;
+  }
+}
